@@ -4,16 +4,21 @@ This app is developed using node.js, express.js and sequelize.
 
 The screenshots of the UI of the app is attached below:
 
+![ArecaPeelTech-imgs1](https://user-images.githubusercontent.com/58632626/152818654-d070cc2c-c20d-48e5-a82e-8b938edae146.png)
 This is the home page. A click on the page or a press of enter key will take you into the app.
 
+![ArecaPeelTech-imgs2](https://user-images.githubusercontent.com/58632626/152818685-11a05965-4fdb-4a90-a9f4-4246fcbc029f.png)
 This is the login page. User name and password are verified.
 
-
-![ArecaPeelTech-imgs1](https://user-images.githubusercontent.com/58632626/152818654-d070cc2c-c20d-48e5-a82e-8b938edae146.png)
-
-![ArecaPeelTech-imgs2](https://user-images.githubusercontent.com/58632626/152818685-11a05965-4fdb-4a90-a9f4-4246fcbc029f.png)
-
 ![ArecaPeelTech-imgs3](https://user-images.githubusercontent.com/58632626/152818715-45f8c337-2171-4ab4-a888-c6a4ab587467.png)
+This page has two options: Goods Received and Transactions
+‘Goods Received’ button is used to enter the details of the customer whereas ‘Transactions’ button is used to see the previous transactions.
+
+When Goods Received button is pressed you will see the customer information entering page.
+
+
+
+
 
 ![ArecaPeelTech-imgs4](https://user-images.githubusercontent.com/58632626/152818738-cf17d481-f973-43f2-8b46-c9cd2951ad1c.png)
 
