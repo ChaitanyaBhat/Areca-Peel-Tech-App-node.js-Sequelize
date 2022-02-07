@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ArecaPeelTech</title>
+    <link rel="stylesheet" href="/stylesheets/index.css">
+</head>
+<body>
+    <center>
+    <div class="wrapper">
+        <div>
+            <img src="images/peach_db.jpg" class="logo-img" alt="">
+        </div>
+        <div>
+            <a href="/login" class="admin-login-link header-title">ArecaPeelTech</a>
+        </div>
+        <div>
+            <label class="sub-title">Old <b>Work</b> with New <b>Ease</b></label>
+        </div>
+    </div> 
+    </center>
+    <script>
+        document.onkeypress = function clicked(event) {
+            if(event.keyCode == 13) {
+                let login_link = document.querySelector(".admin-login-link");
+                login_link.click();
+            }
+        }
+    </script>
+</body>
+</html>

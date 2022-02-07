@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ArecaPeelTech</title>
+    <link rel="stylesheet" href="/stylesheets/received.css">
+</head>
+<body>
+    <header class="header-img">
+        <h2 class="header-title">ArecaPeelTech</h2>
+        <a href="/logout" class="logout header-links">Logout</a>
+        <a href="/options" class="back-link header-links">Back</a>
+        <a href="/home" class="back-home-link header-links">Home</a>
+    </header>
+    <div class="content">
+        <div class="received-title-div">
+            <h2 class="goods-received-title">Goods Received</h2>
+        </div>
+        <div class="info-label">
+            <h4><%= label_text %></h4>
+        </div>
+        <form action="/received" method="POST">
+            <div class="received-data-container">
+                <label for="customer-name">Customer Name:</label>
+                <input type="text" class="customer-name" name="customer_name" required>
+                <label for="address">Address:</label>
+                <input type="text" class="address" name="address">
+                <label for="contact-no">Contact Number:</label>
+                <input type="text" class="contact-no" name="contact_no">
+                <label for="sacks-received">Sacks Received:</label>
+                <input type="text" class="sacks-received" name="sacks_received">
+                <label for="received-date">Received Date:</label>
+                <input type="date" class="received-date" name="received_date">
+            </div>
+            <center>
+                <div class="form-buttons">
+                    <button type="reset" class="clear-btn">Clear</button>
+                    <button type="submit" class="submit-btn">Submit</button>
+                </div>
+            <center>
+        </form>
+    </div>
+    <script>
+        document.onload = document.querySelector(".customer-name").focus();
+    </script>    
+</body>
+</html>

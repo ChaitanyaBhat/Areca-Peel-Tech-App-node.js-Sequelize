@@ -1,0 +1,104 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+.header-img {
+    width: 100%;
+    background: #fcccad;
+    box-shadow: 1px 2px 4px rgba(5, 82, 82, 0.35);
+    height: 50px;
+}
+.header-title {
+    font-family: Parkavenue, Comic Sans MS, cursive;
+    font-style: italic;
+    font-weight: 500;
+    text-align: center;
+    color: #055252;
+    text-shadow: 1px 1px 4px #7a3405; 
+    float: left;    
+    font-size: 30px;
+    padding: 10px 2px;       
+}
+.header-links {
+    float: right;
+    text-decoration: none;
+    font-family: Roboto;
+    font-style: italic;
+    font-weight: normal;
+    text-align: center;
+    color: #FFF2F2;
+    text-shadow: 2px 1px 1px #055252;
+    font-size: 14px;
+    margin: 15px 6px 0px;
+}
+.header-links:hover {
+    transition: ease 1s;
+    color: #469994;
+}
+
+.content {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 160px;
+    margin-bottom: 80px;
+    width: 200px;
+    height: 300px;
+}
+.content a {
+    display: flex;
+    text-decoration: none; 
+    color: #FFFFFF;
+    background: #055252;
+    box-shadow: inset 4px 5px 10px #6FBDB8;
+    border-radius: 10px;
+    font-family: Roboto;
+    font-style: italic;
+    font-weight: 300;
+    text-align: center;
+    font-size: 18px;
+}
+.content a:hover, .content a:focus {
+    box-shadow: 0px 2px 2px #ffb27e;
+    cursor: pointer;
+}
+.goods-received-link {
+    padding: 10px 0px 10px 25px;
+}
+.transactions-link {
+    padding: 10px 0px 10px 35px;
+    margin: 100px 0px;
+}
+
+@media only screen and (min-width: 768px) {
+    .header-img {
+        height: 65px;
+    }
+    .header-title {
+        font-size: 32px;
+        padding: 15px 5px;       
+    }
+    .header-links {
+        font-size: 16px;
+        margin: 20px 10px 0px;
+    }
+
+    .content {
+        width: 250px;
+    }
+    .content a {
+        font-size: 20px;
+    }
+    .goods-received-link {
+        padding: 10px 0px 10px 40px;
+    }
+    .transactions-link {
+        padding: 10px 0px 10px 50px;
+        margin: 100px 0px;
+    }
+}
+
+@media only screen and (min-width: 1282px) {
+    .header-links {
+        margin: 20px 15px 0px;
+    }
+}

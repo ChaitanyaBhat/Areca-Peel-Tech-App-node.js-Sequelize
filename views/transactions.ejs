@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Transactions</title>
+    <link rel="stylesheet" href="/stylesheets/transactions.css">
+</head>
+<body>
+    <header class="header-img">
+        <h2 class="header-title">ArecaPeelTech</h2>
+        <a href="/logout" class="logout header-links">Logout</a>
+        <a href="/options" class="back-link header-links">Back</a>
+        <a href="/home" class="back-home-link header-links">Home</a>
+    </header>
+    <div class="content">
+        <div class="transactions-title-div">
+            <h2 class="transactions-title">Transactions</h2>
+        </div>
+        <div class="page-links">
+            <a href="/options/transactions/<%= +page_no + 1 %>" class="previous-page">< Previous Page</a>
+            <a href="/options/transactions/<%= +page_no - 1 %>" class="next-page">Next Page ></a>
+        </div>
+        <div class="info-label">
+            <h4><%= no_data_label %></label>
+        </div>
+        <div class="table-wrapper">
+            <div class="transactions-data-table">
+                <div class="thead">
+                    <div class="tr">
+                        <div class="td">Customer Id</div>
+                        <div class="td">Name</div>
+                        <div class="td">Address</div>
+                        <div class="td">Contact Number</div>
+                        <div class="td">Peeled Arecanuts (kg)</div>
+                        <div class="td">Amount Paid (Rs)</div>
+                        <div class="td">Status</div>
+                    </div>
+                </div>                                             
+                <div class="tbody">
+                    <% for (row in data) {%>
+                    <form class="tr" method="POST">
+                        <div class="td"><input type="text" readonly name="customer_id" id="customer-id" value="<%= data[row].customer_id %>"></div>
+                        <div class="td"><input type="text" readonly name="name" value="<%= data[row].Customer.name %>"></div>
+                        <div class="td"><input type="text" readonly name="address" value="<%= data[row].Customer.address %>"></div>
+                        <div class="td"><input type="text" readonly name="contact_no" value="<%= data[row].Customer.contact_no %>"></div>
+                        <div class="td"><input type="text" readonly name="peeled_arecanuts" value="<%= data[row].ReturnedGood.peeled_arecanuts %>"></div>
+                        <div class="td"><input type="text" readonly name="total_amount" value="<%= data[row].ReturnedGood.total_amount %>"></div>
+                        <div class="td"><input type="text" readonly name="status" id="status" value="<%= data[row].status %>"></div>
+                        <input type="hidden" readonly name="received_id" value="<%= data[row].received_id %>">
+                        <input type="hidden" readonly name="sacks_received" value="<%= data[row].sacks_received %>">
+                        <input type="hidden" readonly name="received_date" value="<%= data[row].received_date %>">
+                        <input type="hidden" readonly name="id" value="<%= data[row].Customer.id %>">
+                        <input type="hidden" readonly name="returned_id" value="<%= data[row].ReturnedGood.received_id %>">
+                        <input type="hidden" readonly name="returned_date" value="<%= data[row].ReturnedGood.returned_date %>">
+                        <input type="hidden" readonly name="price_per_kg" value="<%= data[row].ReturnedGood.price_per_kg %>">
+                        <input type="hidden" readonly name="gst_rate" value="<%= data[row].ReturnedGood.gst_rate %>">
+                        <input type="hidden" readonly name="subtotal" value="<%= data[row].ReturnedGood.subtotal %>">
+                        <input type="hidden" readonly name="gst_applicable" value="<%= data[row].ReturnedGood.gst_applicable %>">
+                        <div class="td">
+                            <button type="submit" class="upload-details" tabindex="1" onclick="actionDeciding(this)">
+                                <%= data[row].button_text %>
+                            </button>
+                        </div>
+                    </form>
+                    <%} %>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function actionDeciding(element) {
+            if(element.innerText == "Upload") {
+                element.parentElement.parentElement.action = "/upload";
+            }
+            else if(element.innerText  == "Invoice") {
+                element.parentElement.parentElement.action = "/details";
+            }
+        }
+    </script>
+</body>
+</html>

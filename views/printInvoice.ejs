@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="print_js_files/print.min.css">
+    <title>ArecaPeelTech</title>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/printInvoice.css">
+</head>
+<body>
+    <!-- change title, location and contact number fields according to the admin -->
+    <form action="#" method="POST" class="wrapper" id="print-wrapper">
+        <div class="invoice-head">
+            <div class="logo">
+                <p class="title">Areca Peeler</p>
+                <p class="location font-set">Location, Yellapur</p>
+            </div>
+            <div class="contact-info">
+                <p class="contact font-set">Contact Us:</p>
+                <p class="number font-set">7204509057, 7483243444</p>
+            </div>        
+        </div>
+        <div class="content">
+            <div class="customer-details">
+                <div class="detail">
+                    <h4>Customer Id:</h4>
+                    <p><%= details.customer_id %></p>
+                </div>
+                <div class="detail">
+                    <h4>Name:</h4>
+                    <p><%= details.name %></p>
+                </div>
+                <div class="detail">
+                    <h4>Address:</h4>
+                    <p><%= details.address %></p>
+                </div>
+                <div class="detail">
+                    <h4>Contact Number:</h4>
+                    <p><%= details.contact_no %></p>
+                </div>
+            </thead>
+            </div>
+            <table class="transaction-details">
+                <thead>
+                    <tr>
+                        <th>Peeled Arecanuts (kg)</th>
+                        <th>Subtotal (Rs)</th>
+                        <th>GST Applicable (Rs)</th>
+                        <th>Total Amont (Rs)</th>
+                    </tr>
+                </thead> 
+                <tbody>
+                    <tr>
+                        <td><%= details.peeled_arecanuts %></td>
+                        <td><%= details.subtotal %></td>
+                        <td><%= details.gst_applicable %></td>
+                        <td><%= details.total_amount %></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </form>
+    <div class="footer-btns">
+        <button type="submit" class="print-btn" onclick="printJS('print-wrapper', 'html')">
+            Print Invoice
+         </button> 
+        <a href="/options/transactions/0" class="transactions-link"><button>Back</button></a>
+    </div>
+    <script src="print_js_files/print.min.js"></script>
+    <script>
+        document.onload = document.querySelector(".print-btn").focus();
+    </script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArecaPeelTech</title>
+    <link rel="stylesheet" href="/stylesheets/adminLogin.css">
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header-img">
+            <h2 class="header-title">ArecaPeelTech</h2>
+            <a href="/home" class="back-link header-links">Back</a>
+        </header>
+        <div class="content">
+            <center>
+                <div class="info-div">
+                    <label class="info-label"></label>
+                </div>  
+            </center>    
+            <div class="admin-login-box">
+                <form name="adminLoginForm" action="/login" method="POST" onsubmit="return validateUser()">
+                    <center>
+                        <div class="admin-login">
+                            <label for="user-name">User Name:</label>
+                            <input type="text" class="user-name" name="user_name">
+                            <label for="password">Password:</label>
+                            <input type="password" class="password" name="password">
+                        </div>
+                        <div class="form-buttons">
+                            <button type="reset" class="clear-btn">Clear</button>
+                            <button type="submit" class="submit-btn">Submit</button>
+                        </div>
+                    </center>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.onload = document.querySelector(".user-name").focus();
+        
+        function validateUser() {
+            let user_name = document.adminLoginForm.user_name.value;
+            let password = document.adminLoginForm.password.value;
+            let info = document.querySelector(".info-label");
+
+            if(user_name == "" || password == "") {
+                info.innerText = "User Name / Password required!";
+                document.adminLoginForm.user_name.value = "";
+                document.adminLoginForm.password.value = "";
+                return false;
+            }
+            else if(user_name == "abc" && password == "123") {
+                info.innerText = "";
+                return true;
+            }
+            else {
+                info.innerText = "User Name / Password is incorrect.";
+                document.adminLoginForm.user_name.value = "";
+                document.adminLoginForm.password.value = "";
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>

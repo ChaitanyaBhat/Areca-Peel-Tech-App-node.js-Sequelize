@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ArecaPeelTech</title>
+    <link rel="stylesheet" href="/stylesheets/options.css">
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header-img">
+            <h2 class="header-title">ArecaPeelTech</h2>
+            <a href="/logout" class="logout header-links">Logout</a>
+            <a href="/home" class="back-home-link header-links">Home</a>
+        </header>
+        <div class="content">
+                <a href="/options/received" class="goods-received-link">Goods Received</a>
+                <a href="/options/transactions/0" class="transactions-link">Transactions</a>   
+        </div>        
+    </div>
+    <script>
+        document.onload = document.querySelector(".goods-received-link").focus();
+    </script>
+</body>
+</html>

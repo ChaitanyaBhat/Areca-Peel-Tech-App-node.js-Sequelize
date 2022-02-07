@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ArecaPeelTech</title>
+    <link rel="stylesheet" href="/stylesheets/returned.css">
+</head>
+<body>
+    <header class="header-img">
+        <h2 class="header-title">ArecaPeelTech</h2>
+        <a href="/logout" class="logout header-links">Logout</a>
+        <a href="/options/transactions/0" class="back-link header-links">Back</a>
+        <a href="/home" class="back-home-link header-links">Home</a>
+    </header>
+    <div class="content">
+        <div class="returned-title-div">
+            <h2 class="goods-returned-title">Goods Returned</h2>
+        </div>
+        <div  class="info-label">
+            <h4><%= label_text %></h4>
+        </div>
+        <form action="/returned" method="POST">
+            <div class="returned-data-container">
+                <label for="name">Customer Name:</label>
+                <input type="text" class="name" name="name" value="<%= customer_name %>" readonly>
+                <label for="received-id">Sacks Received Id:</label>
+                <input type="text" class="received-id" name="received_id" value="<%= data %>" readonly>
+                <label for="areca-weight">Peeled Arecanuts(kg):</label>
+                <input type="text" class="areca-weight" name="areca_weight" required>
+                <label for="kg-price">Price/kg(rupee):</label>
+                <input type="text" class="kg-price" name="kg_price" required>
+                <label for="gst-rate">GST Rate(%):</label>
+                <input type="text" class="gst-rate" name="gst_rate" required>
+                <label for="returned-date">Returned Date:</label>
+                <input type="date" class="returned-date" name="returned_date">
+            </div>
+            <center>
+                <div class="form-buttons">
+                    <button type="reset" class="clear-btn">Clear</button>
+                    <button type="submit" class="submit-btn">Submit</button>
+                </div>
+            </center>
+        </form>
+    </div>    
+    <script>
+        document.onload = document.querySelector(".areca-weight").focus();
+    </script>
+</body>
+</html>

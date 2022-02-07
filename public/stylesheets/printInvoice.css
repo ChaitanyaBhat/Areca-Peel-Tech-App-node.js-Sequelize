@@ -1,0 +1,86 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+.wrapper {
+    width: 500px;
+}
+.invoice-head {
+    border-bottom: solid black 2px;
+    margin-bottom: 5px;
+}
+.invoice-head > div {
+    display: inline-block;
+}
+.invoice-head p {
+    margin: 6px 0px;
+}
+.invoice-head .title {
+    font-size: 18px;
+    font-style: italic;
+    font-weight: bold;
+}
+.logo {
+    margin-right: 150px;
+    margin-left: 5px;
+}
+
+.font-set {
+    font-family: Roboto;
+    font-size: 14px;
+}
+
+.detail > * {
+    display: inline-block;
+    font-family: Roboto;
+    font-size: 14px;
+    margin: 5px 0px;
+}
+.detail > h4 {
+    padding: 0px 15px 0px 5px;
+}
+
+.content > table {
+    border-collapse: collapse;
+    margin-top: 5px;
+}
+.transaction-details * {
+    font-family: Roboto;
+    font-size: 14px;
+    line-height: 22px;
+    border: black 1px solid; 
+    text-align: center;
+}
+
+.footer-btns {
+    width: 500px;
+}
+.footer-btns > button, .transactions-link {
+    width: 150px; 
+    height: 30px;
+    background: #014848;
+    border-radius: 10px;    
+    font-size: 18px; 
+    text-align: center;
+    margin: 20px 10px 20px 50px;
+}
+.transactions-link {
+    text-decoration: none; 
+}
+.transactions-link > button {
+    color: white;   
+    background: #014848;
+    border-radius: 10px;    
+    font-size: 18px; 
+    padding: 2px 50px;
+
+}
+.print-btn {
+    color: white;
+}
+.footer-btns > button:hover, .transactions-link > button:hover, .footer-btns > button:focus, .transactions-link > button:focus{
+    cursor: pointer;
+    background-color: #027575;
+    box-shadow:0px 1px 1px 0px #5f2702;
+    outline: none;
+}
