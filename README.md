@@ -1,4 +1,13 @@
-# Areca-Peel-Tech-App-node.js-Sequelize
+# Areca Peel Tech App
+
+This app is developed using node.js, express.js and sequelize.
+
+The screenshots of the UI of the app is attached below:
+
+This is the home page. A click on the page or a press of enter key will take you into the app.
+
+This is the login page. User name and password are verified.
+
 
 ![ArecaPeelTech-imgs1](https://user-images.githubusercontent.com/58632626/152818654-d070cc2c-c20d-48e5-a82e-8b938edae146.png)
 
