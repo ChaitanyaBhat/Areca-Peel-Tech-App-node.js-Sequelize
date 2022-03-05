@@ -1,4 +1,4 @@
-# Areca Peel Tech App
+# Areca Peel Tech App:
 
 This app is developed using node.js, express.js and sequelize.
 
